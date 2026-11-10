@@ -2,57 +2,24 @@
 
 **Change the past. Restore the flow.**
 
-Download the Windows game from [Releases](https://github.com/ZweWH/jewel-the-last-timeline-downloads/releases).
-**No GitHub account is required.** This repository contains the download guide;
-the playable game is attached to the release.
+Get the [v118 Windows venue test](https://github.com/ZweWH/jewel-the-last-timeline-downloads/releases/tag/v118-windows-venue). The release assets are public. Play requires a Jewel event account provided separately.
 
 ## Download and play
 
-1. Open the v089 release and expand **Assets**. Download all three numbered
-   **.zip.001**, **.zip.002** and **.zip.003** files, plus **Reassemble-JEWEL-v089.cmd**,
-   into one new folder. Also download **READ-ME-FIRST.txt**,
-   **DISTRIBUTION-v089.json** and **SHA256SUMS.txt**. Keep the exact filenames.
-2. Allow at least **15 GB free space** for downloads, assembly and extraction.
-   Double-click **Reassemble-JEWEL-v089.cmd**. Wait for **SUCCESS**: the helper checks
-   every part and the complete ZIP. It does not overwrite an existing ZIP or
-   delete downloads.
-3. Right-click **JEWEL-The-Last-Timeline-v089-Windows.zip**, select **Extract All**,
-   then open the extracted **Windows** folder and run **TheEightKeys.exe**.
-   Keep the entire Windows folder together.
+1. Under **Assets**, download all three `Jewel-v118-Venue-Windows.zip.001` to `.003` parts and `Reassemble-JEWEL-v118.cmd` to the same folder. Allow at least **16 GB free** if the downloads, rebuilt ZIP, and extracted game are on one drive.
+2. Run **Reassemble-JEWEL-v118.cmd**. It joins the three parts and verifies the complete ZIP with SHA-256. **SHA256SUMS.txt** also lists the individual part checksums.
+3. Extract **Jewel-v118-Venue-Windows.zip** to a writable local folder. Open **START-HERE.txt**, then run **Play Jewel Venue (DX11).cmd**. Keep the extracted Windows folder together.
 
-The three numbered parts form one game download and cannot be extracted
-separately. Use these release assets rather than GitHub's automatic **Source code**
-ZIP/TAR downloads. Read **READ-ME-FIRST.txt** for extraction troubleshooting.
+Use the numbered release assets. GitHub’s automatic **Source code** ZIP and TAR files contain a snapshot of this download guide.
 
 ## Host and join
 
-Both PCs use the same game. The host chooses **Host Game** and plays Director
-(NY). On another PC on the same approved LAN, enter the host's IPv4 address,
-leave port **7777**, then choose **Join Game**. After joining, use
-**Escape → Choose Role** to select a free engineering role before launch, then
-**Back to Home → Resume Jewel**. The roles are BIM, Site, Technical, Planning,
-QAQC, Safety, Quantity Surveyor and Mechanical. Roles lock after launch.
-Closing or leaving the host ends the round.
+1. Sign in on both PCs using the provided Jewel event account. Both PCs need internet for sign-in and must be able to reach each other on the venue network.
+2. On the first PC, select **Host Game** and wait for NY, the Director, to enter Jewel.
+3. On the second PC, enter the host PC’s local IPv4 address and port **7777**. Select **Join Game**, choose a role, and wait for the intro to finish. If the connection times out, venue IT can check inbound UDP 7777 on the host.
 
-Client PCs do not need Unreal Editor or build tools. IT can review the included
-Visual C++ runtime if a PC needs it or approved LAN traffic if joining is blocked.
-The helper does not install prerequisites or change firewall/security settings.
-There is no automatic server discovery or internet matchmaking.
+## Test scope
 
-## Current test scope
+The launcher uses DirectX 11 at 960 × 540 with a 20 FPS cap for the initial stability check. Sign-in, Sign out, Host and Join passed with two instances on one PC. The two-PC venue test is pending.
 
-This is the **v089 Development build**. All eight missions, the eight-key finale
-and NY movement are retained. Actual packaged tests used two rendered processes
-on one PC and covered Host/Join, all eight sequential role choices,
-Home/Resume/Leave/Quit, normal BIM launch and unfinished same-application recovery,
-NY shrink/flight/restore and run-state caps, zero-key finale rejection and a new
-host round. These were software-operated tests.
-
-Real second-PC LAN, clean-PC prerequisites, complete packaged mission/finale runs,
-physical keyboard/Xbox, full gait/train/collision coverage, nine-player rendering
-and representative performance remain pending. Recorded native/renderer warnings
-remain. See the package's **README-JEWEL.txt** and **BuildInfo-v089.json** for
-full details. Public availability does not change this test scope.
-
-Original ZIP: **4,549,217,166 bytes**. SHA256:
-`47d11ac53b638aae6ea193922496b75a455d83ae599cf4bf62b544d904f5ec53`
+[Browse earlier releases](https://github.com/ZweWH/jewel-the-last-timeline-downloads/releases).
